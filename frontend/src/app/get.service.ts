@@ -10,7 +10,7 @@ export class GetService {
 	}
 
 	// async deleteUrl(id: string) {
-	// 	return await this.http.get<string[]>(`/delete/${id}`).toPromise()
+	// 	return await this.http.delete<string[]>(`/${id}`).toPromise()
 	// }
 
 	// async deleteUrl(id: string) {

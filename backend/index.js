@@ -102,7 +102,7 @@ app.get('/:id', async (req, res, next) => {
     }
   });
 
-//   app.get('/delete/:id', async (req, res, next) => {
+//   app.delete('/:id', async (req, res, next) => {
 //     // const { id: slug } = req.params;
 //     let slug = req.params.id
 //     console.log(slug)
@@ -112,9 +112,8 @@ app.get('/:id', async (req, res, next) => {
 //         console.log(url)
 //         const syntax = `ObjectId(${url._id})`
 //         console.log(syntax)
-//         await urls.deleteOne({ "_id": syntax })
-//         res.status(200)
-//         res.end();
+//         await urls.deleteOne({ _id: syntax });
+//         res.json({ success: id })
 //       }
 //       return res.status(404).sendFile(notFoundPath);
 //     } catch (error) {
