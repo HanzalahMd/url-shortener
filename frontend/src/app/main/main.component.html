@@ -1,0 +1,45 @@
+
+<div class="row mt-5">
+	<div class="col">
+		<h2>URL SHORTENER</h2>
+	</div>
+</div>
+
+<form [formGroup]="form">
+	<div class="form-group">
+		<label for="title">URL</label>
+		<input id="title" class="form-control" type="text" placeholder="Type the URL here" formControlName="url">
+	</div>
+	<div class="form-group">
+		<label for="comments">Slug</label>
+		<input id="comments" class="form-control" placeholder="Type your slug here" formControlName="slug">
+	</div>
+	<div class="d-flex justify-content-between mt-4">
+		<button class="btn btn-lg btn-danger" (click)="clear()">
+			<span style="margin-right: 5px !important;">Clear</span>
+			<i class="fas fa-trash-alt"></i>
+		</button>
+		<button class="btn btn-lg btn-info" [disabled]="form.invalid" (click)="create()">
+			<span style="margin-right: 5px !important;">Create</span>
+			<i class="fas fa-camera-retro"></i>
+		</button>
+	</div>
+</form>
+
+<div class="row mt-5">
+	<div class="col" *ngIf="url">
+        <hr>
+        <h5>The full URL: {{url}}</h5>
+        <h5>Your new short URL: <a href="{{hostname}}{{slug}}" target="_blank">{{hostname}}{{slug}}</a></h5>
+        <h5>ID: {{id}}</h5>
+	</div>
+</div>
+
+<div class="error">
+    <h3>{{errorMessage}}</h3>
+</div>
+
+<button class="btn btn-lg btn-warning" [routerLink]="['/', 'lists']">
+    <span style="margin-right: 5px !important;">Lists</span>
+    <i class="fas fa-camera-retro"></i>
+</button>

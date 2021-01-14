@@ -1,0 +1,9 @@
+.error {
+    color: rgb(147, 33, 33);
+    text-align: center;
+}
+
+button:disabled {
+    cursor: not-allowed;
+  }
+  
