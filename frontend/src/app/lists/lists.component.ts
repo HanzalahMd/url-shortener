@@ -19,10 +19,21 @@ export class ListsComponent implements OnInit {
       .then(result => {
         // console.log(result)
         this.urls = result
-        console.log(this.router)
+        // console.log(this.router)
       })
       
 			.catch(e => console.error('error: ', e))
-	}
+  }
+  
+  // delete(id) {
+  //   this.getSvc.deleteUrl(id)
+  //     .then(result => {
+  //       console.log(result)
+  //       this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  //     this.router.onSameUrlNavigation = 'reload';
+  //     this.router.navigate(['/same-route']);
+  //     })
+  //     .catch(e => console.error('error: ', e))
+  // }
 
 }

@@ -8,4 +8,12 @@ export class GetService {
 	async getUrls() {
 		return await this.http.get<string[]>('/urls').toPromise()
 	}
+
+	// async deleteUrl(id: string) {
+	// 	return await this.http.get<string[]>(`/delete/${id}`).toPromise()
+	// }
+
+	// async deleteUrl(id: string) {
+	// 	return await this.http.put<string[]>('/delete', id).toPromise()
+	// }
 }

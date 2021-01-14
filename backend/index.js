@@ -86,7 +86,7 @@ app.get('/urls', async (req, res) => {
 app.get('/:id', async (req, res, next) => {
     // const { id: slug } = req.params;
     let slug = req.params.id
-    console.log(req.params)
+    // console.log(req.params)
     try {
       const url = await urls.findOne({ slug });
       if (url) {
@@ -101,6 +101,46 @@ app.get('/:id', async (req, res, next) => {
       return res.status(404).sendFile(notFoundPath);
     }
   });
+
+//   app.get('/delete/:id', async (req, res, next) => {
+//     // const { id: slug } = req.params;
+//     let slug = req.params.id
+//     console.log(slug)
+//     try {
+//       const url = await urls.findOne({ slug });
+//       if (url) {
+//         console.log(url)
+//         const syntax = `ObjectId(${url._id})`
+//         console.log(syntax)
+//         await urls.deleteOne({ "_id": syntax })
+//         res.status(200)
+//         res.end();
+//       }
+//       return res.status(404).sendFile(notFoundPath);
+//     } catch (error) {
+//       return res.status(404).sendFile(notFoundPath);
+//     }
+//   });
+
+//   app.put('/delete/:id', async (req, res, next) => {
+//     // const { id: slug } = req.params;
+//     let slug = req.body.id
+//     console.log(req)
+//     console.log(slug)
+//     try {
+//       const url = await urls.findOne({ slug });
+//       if (url) {
+//         console.log(url)
+//         const syntax = `ObjectId(${url._id})`
+//         console.log(syntax)
+//         await urls.deleteOne({ "_id": syntax })
+//         res.end();
+//       }
+//       return res.status(404).sendFile(notFoundPath);
+//     } catch (error) {
+//       return res.status(404).sendFile(notFoundPath);
+//     }
+//   });
 
 app.use((error, req, res, next) => {
     if (error.status) {
