@@ -9,7 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { CreateService } from './create.service';
 import { GetService } from './get.service';
-import { ListsComponent } from './lists/lists.component'
+import { ListsComponent } from './lists/lists.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'
 
 const ROUTES: Routes = [
   { path: '', component: MainComponent },
@@ -19,7 +21,7 @@ const ROUTES: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent, MainComponent, ListsComponent
+    AppComponent, LoginComponent, MainComponent, ListsComponent, HeaderComponent, FooterComponent
   ],
   imports: [
     BrowserModule,

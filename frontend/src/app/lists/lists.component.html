@@ -1,16 +1,23 @@
-<h2>List of URLS</h2>
-
-<button class="btn btn-lg btn-info" [routerLink]="['/']">
-    <span style="margin-right: 5px !important;">Main</span>
-    <i class="fas fa-camera-retro"></i>
-</button>
-
-<div *ngFor="let u of urls">
-	<!-- <a href="/country/{{ c }}">
-		{{ c | uppercase }}
-    </a> -->
-    {{ u.url }}
-    <a href="/{{u.slug}}" target="_blank">{{u.slug}}</a>
-    {{ u.clicks }}
-    {{ u._id }}
+<div class="row mt-5 mb-3">
+    <div class="col">
+        <h2>List of URLS</h2>
+    </div>
 </div>
+
+<div class="row">
+    <div class="col">
+        <div *ngFor="let u of urls" class="list-group mt-2">
+            <a href="/{{u.slug}}" target="_blank" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1" style="color: goldenrod;">{{u.slug}}</h5>
+                <small>ID: {{ u._id }}</small>
+              </div>
+              <p class="mb-1">{{ u.url }}</p>
+              <small>You have visited this link {{ u.clicks }} times.</small>
+            </a>
+            <br>
+          </div>
+    </div>
+</div>
+
+
