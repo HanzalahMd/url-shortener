@@ -154,6 +154,8 @@ app.use((error, req, res, next) => {
     });
   });
 
+// Serve Angular App
+app.use(express.static(`${__dirname}/static`))
 
 const PORT = process.env.PORT || 3000;
 

@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/styles.css"],"names":[],"mappings":";;AAAA,8EAA8E,C","file":"styles.css","sourcesContent":["/* You can add global styles to this file, and also import other style files */\n@import \"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\""],"sourceRoot":"webpack:///"}
